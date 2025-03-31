@@ -38,7 +38,7 @@ GROUP BY DATE(o.order_purchase_timestamp)
 ORDER BY dt ASC;
 
 
-### 이상화
+### 이승화
 
 SELECT 
     E.ID,  
