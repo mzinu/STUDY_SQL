@@ -47,5 +47,45 @@ SELECT
 FROM ECOLI_DATA E  
 LEFT JOIN ECOLI_DATA P ON E.PARENT_ID = P.ID  
 WHERE E.PARENT_ID IS NOT NULL 
-     AND (E.GENOTYPE & P.GENOTYPE) = P.GENOTYPE
-ORDER BY E.ID ASC;
+     AND (E.GENOTYPE & P.GENOTYPE) 
+     
+
+## 핵심개념
+
+### LIKE 연산자
+
+LIKE 와일드카드(%, _) 사용법
+
+패턴	                설명            	           예시 (매칭됨)	       예시 (매칭안됨)
+
+'2022-10%'  	2022년 10월로 시작하는 값 찾기	   2022-10-15 08:00:00	    2022-09-30 23:59:59
+
+'%2022%'	    2022가 포함된 값 찾기	              상품 2022 버전	        상품 2023 버전
+
+'2022-10-__'	2022년 10월 "특정 일" 찾기	           2022-10-15	              2022-10
+
+➡ % : 0개 이상의 모든 문자 가능 
+
+➡ _ : 정확히 한 글자만 채워짐
+
+### DATE_FORMAT()
+
+포맷 코드	설명	        예시 (2022-10-05 14:23:11)
+
+%Y     	4자리 연도	                2022
+
+%y     	2자리 연도	                22
+
+%m	    월 (2자리)	                10
+
+%d  	일 (2자리)	                05
+
+%H  	시 (24시간제)	            14
+
+%i	    분	                        23
+
+%s  	초	                        11
+
+%W  	요일 (영어)              Wednesday
+
+%a	    요일 (축약형)	            Wed
