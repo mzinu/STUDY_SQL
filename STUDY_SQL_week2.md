@@ -63,7 +63,7 @@ CASE
         WHEN '수식' THEN 'C'
   END AS 칼럼이름
 ```
- : A일 때 B 출력
+ : A일 때 B 출력,
    수식에 만족할 때 C 출력
 
 - CONTCAT 함수 : 문자열을 이어줌
