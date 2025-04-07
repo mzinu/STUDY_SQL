@@ -35,6 +35,7 @@ FROM SUBWAY_DISTANCE
 GROUP BY ROUTE
 ORDER BY SUM(D_BETWEEN_DIST) DESC;
 ```
+<!-- ROUND 함수는 명시된 자리까지 반올림-->
 
 ### 이승화
 ```SQL
